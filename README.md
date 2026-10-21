@@ -1,156 +1,182 @@
-# IPL Player & Team Stats Analysis
+# IPL Player & Team Stats Analysis 🏏
 
 ## 📌 Project Overview
 
-This project explores Indian Premier League (IPL) cricket data from 2008 to 2024 using Python and data analysis libraries. It focuses on analysing match results, team performance, player statistics, toss decisions, and other patterns in IPL matches through data cleaning, exploratory data analysis (EDA), and visualisations.
+This project explores Indian Premier League (IPL) cricket data using Python and data analysis libraries. It focuses on match outcomes, team performance, individual player statistics, toss decisions, scoring patterns, and venue trends through Exploratory Data Analysis (EDA) and data visualisation.
 
-The project was developed as a college micro-project for learning and applying Python for Data Science concepts to a real-world sports dataset.
+Developed as a college micro-project for **Python for Data Science**, this project applies data analysis techniques to real-world cricket data.
 
-## 🎯 Objectives
+## 🎯 Project Objectives
 
-- Explore IPL match and ball-by-ball delivery data.
-- Understand team performance across different seasons.
-- Identify top-performing players based on runs, wickets, and awards.
-- Analyse the relationship between toss decisions and match outcomes.
-- Examine scoring patterns, including fours and sixes.
-- Visualise important findings using charts and graphs.
-- Practise data cleaning, data manipulation, and exploratory data analysis.
+- Analyse IPL match results and team performance.
+- Identify leading run scorers, wicket takers, and award-winning players.
+- Explore the relationship between toss outcomes and match results.
+- Examine scoring patterns involving fours and sixes.
+- Investigate season-wise match counts and venue trends.
+- Practise data cleaning, aggregation, and visualisation using Python.
 
 ## ✨ Features
 
-- **Match Data Exploration:** Inspect dataset structure, dimensions, sample records, and missing values.
-- **Data Cleaning:** Check for duplicate records, handle missing city values, and examine matches with no result.
-- **Season-wise Analysis:** Visualise the number of matches played across seasons.
-- **Team Performance:** Compare teams based on recorded match wins.
-- **Toss Analysis:** Examine toss decisions and whether the toss-winning team also won the match.
-- **Player Performance:** Identify leading run scorers, wicket takers, and players with the most Player of the Match awards.
-- **Scoring Analysis:** Explore fours and sixes recorded in deliveries.
-- **Venue Analysis:** Examine venues hosting the most matches.
-- **Match Result Analysis:** Visualise the distribution of recorded result types.
+- **Data Exploration:** Inspect dataset dimensions, columns, data types, and sample records.
+- **Data Cleaning:** Examine missing values, handle missing city information, and check duplicate records.
+- **Season Analysis:** Visualise the number of matches recorded in each season.
+- **Team Performance:** Compare teams by recorded match wins.
+- **Toss Analysis:** Explore toss decisions and compare toss winners with match winners.
+- **Batting Analysis:** Identify players with the highest aggregate runs.
+- **Bowling Analysis:** Compare wicket counts using the notebook's dismissal-filtering logic.
+- **Boundary Analysis:** Examine fours and sixes.
+- **Venue Analysis:** Identify venues hosting the most matches.
+- **Player Awards:** Compare players by Player of the Match awards.
+- **Result Analysis:** Visualise the distribution of recorded match result categories.
 
-## 🛠️ Technologies & Libraries
+## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
 | Python | Main programming language |
-| Pandas | Loading, cleaning, filtering, grouping, and analysing tabular data |
-| NumPy | Numerical operations and data handling |
-| Matplotlib | Creating charts and visualisations |
-| Seaborn | Producing statistical visualisations |
-| Jupyter Notebook | Running code interactively and documenting the analysis |
+| Pandas | Data loading, cleaning, filtering, grouping, and analysis |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualisation |
+| Seaborn | Statistical charts and visualisation |
+| Jupyter Notebook | Interactive coding, analysis, and chart display |
 
-## 📂 Dataset
+## 📊 Dataset Information
 
-The analysis uses two CSV files:
+This project uses the **IPL Complete Dataset (2008–2024)**, attributed to Patrick B. on Kaggle. The dataset contains match-level information and ball-by-ball delivery records.
 
-- **`matches.csv`** — Match-level information, such as seasons, teams, toss decisions, venues, winners, and match results.
-- **`deliveries.csv`** — Ball-by-ball information, including batting teams, batters, bowlers, runs, boundaries, and dismissal details.
+### Original dataset source
 
-The dataset covers IPL seasons from 2008 to 2024. The exact coverage and available columns depend on the dataset version used.
+[Kaggle — IPL Complete Dataset (2008–2024)](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020)
 
-**Dataset source:** IPL Complete Dataset, obtained from Kaggle.
+The dataset's acknowledgements identify Cricsheet as a data source.
 
-Before redistributing the CSV files, check the dataset's licence and attribution requirements. If redistribution is not permitted, provide the original dataset link instead of committing the files.
+### Files required
 
-## 📊 Analysis & Visualisations
+| Filename | Description |
+|---|---|
+| `matches.csv` | Match-level records, including seasons, teams, toss decisions, venues, winners, and results |
+| `deliveries.csv` | Ball-by-ball records, including batters, bowlers, runs, extras, and dismissal information |
 
-The notebook contains visualisations covering the following areas:
+The notebook reads both files using their filenames, so they must be available in the notebook's working directory when running the analysis.
 
-1. **Matches per Season** — Compares the number of recorded matches across seasons.
-2. **Team Wins** — Displays teams with the highest recorded win counts.
-3. **Toss Winner vs Match Winner** — Examines how often the toss-winning team also won the match.
-4. **Toss Decisions** — Shows the distribution of recorded decisions to bat or field.
-5. **Top Run Scorers** — Identifies batters with the highest aggregate runs.
-6. **Top Wicket Takers** — Compares bowlers using the notebook's wicket-counting logic.
-7. **Fours and Sixes** — Explores boundary-scoring patterns.
-8. **Matches by Venue** — Highlights venues with the most recorded matches.
-9. **Player of the Match Awards** — Identifies players receiving the most awards.
-10. **Match Result Types** — Compares the recorded categories of match results.
+### Why are the CSV files not included in this repository?
 
-The notebook should be consulted for the actual charts and findings. Specific numerical conclusions should be added only after checking the computed results.
+The dataset files are not included in this repository at present.
+
+- **`deliveries.csv`:** The file is approximately 26 MB, which exceeds GitHub's 25 MiB per-file limit for uploading files through the web interface.
+- **Dataset management:** Keeping the large source dataset separate makes the repository smaller and avoids unnecessary duplication.
+- **Redistribution:** The dataset's applicable licence and attribution requirements should be checked before redistributing its files.
+
+These files have not been removed from the original dataset. Download them from the Kaggle source linked above and place both CSV files alongside the notebook before running it.
+
+## 📈 Analysis & Visualisations
+
+The notebook includes visualisations for the following areas:
+
+1. Matches played per season.
+2. Teams ranked by recorded match wins.
+3. Toss winner compared with match winner.
+4. Distribution of toss decisions.
+5. Top run scorers.
+6. Top wicket takers.
+7. Fours and sixes.
+8. Matches hosted by venue.
+9. Player of the Match awards.
+10. Match result categories.
+
+The actual charts and their computed values are available in the Jupyter notebook. Numerical findings should be interpreted from the notebook outputs rather than assumed from the chart titles alone.
 
 ## 🚀 How to Run the Project
 
-### 1. Clone the repository
+### 1. Download the repository
+
+Download or clone this repository to your computer.
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/ipl-player-team-analysis.git
+cd ipl-player-team-analysis
 ```
 
 Replace `YOUR-USERNAME` with your GitHub username.
 
-### 2. Open the project folder
+### 2. Download the dataset
 
-```bash
-cd ipl-player-team-analysis
-```
+Open the [original Kaggle dataset page](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020), download the dataset, and extract the required files.
 
-### 3. Install the required libraries
+Place `matches.csv` and `deliveries.csv` in the same folder as the notebook.
 
-```bash
-python -m pip install pandas numpy matplotlib seaborn jupyter
-```
-
-### 4. Ensure the dataset files are available
-
-Place `matches.csv` and `deliveries.csv` in the same directory as the notebook, unless the notebook's file paths have been configured differently.
-
-### 5. Launch Jupyter Notebook
-
-```bash
-jupyter notebook
-```
-
-Open `IPL_Player_Team_Analysis.ipynb` and run the cells in order.
-
-Alternatively, open the notebook in Visual Studio Code with the Python and Jupyter extensions installed, select a Python kernel, and use **Run All**.
-
-## 📁 Project Structure
+The final folder should look like this:
 
 ```text
 ipl-player-team-analysis/
 │
 ├── IPL_Player_Team_Analysis.ipynb
+├── README.md
 ├── matches.csv
-├── deliveries.csv
-└── README.md
+└── deliveries.csv
 ```
 
-The CSV files should appear in the repository only if their licence permits redistribution. Otherwise, download them separately from the original source.
+The CSV files are downloaded separately and are not currently stored in this GitHub repository.
 
-## 🧠 Key Learning Outcomes
+### 3. Install the required libraries
 
-Through this project, I practised:
+Make sure Python is installed, then run:
 
-- Working with real-world CSV datasets.
-- Exploring data using Pandas.
-- Identifying missing values and duplicate records.
-- Filtering and aggregating data for statistical comparisons.
-- Analysing match-level and delivery-level cricket statistics.
-- Creating visualisations to communicate patterns in data.
-- Using Jupyter Notebook to combine code, outputs, and analysis.
+```bash
+python -m pip install pandas numpy matplotlib seaborn jupyter
+```
+
+### 4. Open Jupyter Notebook
+
+Launch Jupyter with:
+
+```bash
+jupyter notebook
+```
+
+Alternatively, open the repository folder in Visual Studio Code, install the Python and Jupyter extensions, and open `IPL_Player_Team_Analysis.ipynb`.
+
+### 5. Run the notebook
+
+Select a Python kernel and use **Run All** to execute the notebook cells in order.
+
+If Python reports that a CSV file cannot be found, verify that both dataset files are present in the correct working directory.
+
+## 🧠 Learning Outcomes
+
+This project provides practice in:
+
+- Reading and inspecting CSV datasets with Pandas.
+- Understanding data types, missing values, and duplicate records.
+- Filtering and aggregating records to answer analytical questions.
+- Working with match-level and ball-by-ball cricket data.
+- Creating charts with Matplotlib and Seaborn.
+- Using Jupyter Notebook for interactive analysis.
+- Interpreting patterns in a real-world sports dataset.
 
 ## 🤖 AI Assistance & Acknowledgment
 
-Claude AI was used as an assistance tool during the development of this college micro-project. I used AI assistance while working on the code and analysis, and I ran the notebook to examine its outputs and visualisations.
+Claude AI was used as an assistance tool during the development of this college micro-project. AI assistance contributed to working through the implementation and analysis.
 
-I am continuing to review the implementation, validate the calculations, and strengthen my understanding of the analysis so I can explain and improve the project independently.
+The notebook was executed to examine the generated outputs and visualisations. I am continuing to review the code, verify the calculations, and deepen my understanding so that I can explain and improve the project independently.
 
-## 🔮 Possible Future Improvements
+## 🔮 Future Improvements
 
-- Add more detailed season-by-season comparisons.
-- Validate wicket-counting logic and other statistical calculations.
-- Analyse winning margins and innings-level performance.
-- Compare batting and bowling performance across seasons.
-- Add interactive filters and visualisations.
-- Build a simple dashboard for exploring IPL statistics.
+Potential improvements include:
+
+- Validating wicket-counting logic and other statistical calculations.
+- Adding more detailed season-wise comparisons.
+- Analysing winning margins and innings-level performance.
+- Exploring how batting and bowling trends change across seasons.
+- Improving chart annotations and adding data-backed conclusions.
+- Developing an interactive dashboard for exploring IPL statistics.
 
 ## 📌 Project Status
 
-**Status:** Initial exploratory data analysis completed; further validation and improvements are possible.
+**Status:** Initial exploratory data analysis completed; further validation and improvements are planned.
 
-This project is intended for educational purposes and demonstrates the application of Python data analysis techniques to IPL cricket statistics.
+This project is intended for educational purposes and demonstrates the use of Python data analysis libraries to explore IPL cricket statistics.
 
 ---
 
-**Created as a college micro-project for Python for Data Science.**
+*College micro-project — Python for Data Science.*
